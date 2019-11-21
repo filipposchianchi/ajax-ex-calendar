@@ -7,17 +7,17 @@ $(document).ready( function() {
 
     $(".successivo").click( function() {
         if(mese==11) {
-            $(this).off();
+            
         } else {
             $(".container").empty();
             mese++;
             fAjax();
         }
     })
-    
+
     $(".precedente").click( function() {
         if(mese==0) {
-            $(this).off();
+            
         }else {
             $(".container").empty();
             mese--;
