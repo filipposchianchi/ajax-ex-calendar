@@ -29,3 +29,16 @@ body {
     color: green;
 }
 
+.container {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: center;
+}
+
+.container div{
+    height: 100px;
+    width: calc(100% / 7);
+    border: 1px black solid;
+}

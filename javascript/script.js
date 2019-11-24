@@ -40,6 +40,8 @@ $(document).ready( function() {
                 var numeroDiGiorni = moment('01/'+(mese+1)+'/2018', 'DD/MM/YYYY').daysInMonth();
                 console.log(numeroDiGiorni);
 
+                var primoGiorno = true;
+
                 for(var i = 1; i <= numeroDiGiorni; i++) {
                     var currentDate = moment('2018-' +(mese+1)+ '-' + i, 'YYYY-MM-D').format('YYYY-MM-DD');
                     console.log(currentDate);
@@ -49,6 +51,40 @@ $(document).ready( function() {
                     context = {data: currentDay};
 
                     var html = template(context);
+
+                    console.log(moment(currentDate).day())
+
+                    
+                    if(currentDay === "01 martedì") {
+                        $('.container').prepend("<div></div>")
+                    } else if (currentDay === "01 mercoledì") {
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                    }else if (currentDay === "01 giovedì") {
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                    } else if (currentDay === "01 venerdì") {
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                    }else if (currentDay === "01 sabato") {
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                    }else if (currentDay === "01 domenica") {
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                        $('.container').prepend("<div></div>")
+                    }
+
+
                     $('.container').append('<div data-date="'+currentDate+'">'+ html +'</div>')
                 }
 
